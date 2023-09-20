@@ -1,0 +1,23 @@
+.st-about .about-content {
+  line-height: 1.5;
+}
+
+.st-history .history-item {
+  padding: 20px;
+  border: 1px solid #049FD6;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.st-history .history-item h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #049FD6;
+  flex-basis: auto;
+}
+.st-history .history-item .text {
+  font-size: 18px;
+  flex: 1;
+}/*# sourceMappingURL=about.css.map */

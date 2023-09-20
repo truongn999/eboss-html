@@ -1,4 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap");
+.st-banner {
+  background-image: url(./../images/about/banner-about.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+.st-banner h3 {
+  font-size: 48px;
+  color: #fff;
+  position: relative;
+}
+.st-banner h3::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 4px;
+  background-color: #049FD6;
+}
+
 html,
 body,
 div,
@@ -247,4 +270,27 @@ q:after {
 #backtotop.show {
   opacity: 1;
   visibility: visible;
+}
+
+.st-banner {
+  background-image: url(./../images/about/banner-about.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+.st-banner h3 {
+  font-size: 48px;
+  color: #fff;
+  position: relative;
+}
+.st-banner h3::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 4px;
+  background-color: #049FD6;
 }/*# sourceMappingURL=style.css.map */

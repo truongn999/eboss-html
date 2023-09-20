@@ -1,0 +1,33 @@
+@import './color.scss';
+
+// ABOUT
+.st-about {
+    .about-content {
+        line-height: 1.5;
+    }
+}
+
+//HISTORY
+.st-history {
+    .history-item {
+        padding: 20px;
+        border: 1px solid $cl-secondary;
+        border-radius: 8px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 32px;
+
+        h2 {
+            font-size: 48px;
+            font-weight: bold;
+            color: $cl-secondary;
+            flex-basis: auto;
+        }
+
+        .text {
+            font-size: 18px;
+            flex: 1;
+        }
+    }
+}

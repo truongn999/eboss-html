@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 @import './color';
+@import './about';
 
 html,
 body,
@@ -278,5 +279,30 @@ q:after {
   &.show {
     opacity: 1;
     visibility: visible;
+  }
+}
+// COMPONENT BANNER
+.st-banner {
+  background-image: url(./../images/about/banner-about.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+
+  h3 {
+      font-size: 48px;
+      color: #fff;
+      position: relative;
+
+      &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: 0;
+          width: 10%;
+          height: 4px;
+          background-color: $cl-secondary;
+      }
   }
 }

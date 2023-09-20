@@ -1,5 +1,4 @@
 let items = document.querySelectorAll('#recipeCarousel.carousel .carousel-item')
-    console.log(items);
 		items.forEach((el) => {
 			const minPerSlide = 6
 			let next = el.nextElementSibling
