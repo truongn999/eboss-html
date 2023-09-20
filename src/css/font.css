@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Montserrat Light";
+  src: url(/src/font/Montserrat-Light.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url(/src/font/Montserrat-Bold.ttf);
+  font-style: Bold;
+}/*# sourceMappingURL=font.css.map */
