@@ -1,3 +1,9 @@
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
 .st-about .about-content {
   line-height: 1.5;
 }
@@ -17,7 +23,95 @@
   color: #049FD6;
   flex-basis: auto;
 }
+@media print, screen and (min-width: 1366px) {
+  .st-history .history-item h2 {
+    color: red;
+  }
+}
 .st-history .history-item .text {
   font-size: 18px;
   flex: 1;
+}
+
+.st-vision .vision {
+  display: flex;
+  gap: 24px;
+}
+.st-vision .vision-item {
+  max-width: 392px;
+  padding: 24px;
+  border: 1px solid #E6E6E6;
+}
+.st-vision .vision-img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
+}
+.st-vision .vision-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.st-vision .vision-desc {
+  color: #808080;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.st-value .value {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.st-value .value-content {
+  max-width: 600px;
+}
+.st-value .value-subtitle {
+  line-height: 1.5;
+  color: #808080;
+  margin-top: 40px;
+}
+.st-value .value-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.st-value .value-item {
+  max-width: 288px;
+  border: 1px solid #E6E6E6;
+  padding: 24px;
+}
+.st-value .value-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.st-value .value-desc {
+  color: #808080;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.st-personnel .personnel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 40px;
+}
+.st-personnel .personnel-img {
+  max-width: 288px;
+}
+.st-personnel .personnel-name {
+  color: #333333;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.st-personnel .personnel-pos {
+  color: #049FD6;
+  margin-top: 4px;
 }/*# sourceMappingURL=about.css.map */

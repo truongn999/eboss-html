@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
 @import './color';
 @import './about';
+@import './media';
 
 html,
 body,
@@ -147,7 +148,11 @@ q:after {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1254px!important;
+  max-width: 1254px;
+
+  @include mq(lMax) {
+    padding: 0 30px;
+  }
 }
 
 .body-container {
@@ -272,6 +277,11 @@ q:after {
   visibility: hidden;
   z-index: 1000;
 
+  @include mq(smMax) {
+    width: 34px;
+    height: 34px;
+}
+
   &:hover {
     cursor: pointer;
   }
@@ -284,11 +294,15 @@ q:after {
 // COMPONENT BANNER
 .st-banner {
   background-image: url(./../images/about/banner-about.jpg);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
+
+  @include mq(xlMax) {
+    height: 300px;
+  }
 
   h3 {
       font-size: 48px;

@@ -1,27 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap");
-.st-banner {
-  background-image: url(./../images/about/banner-about.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-}
-.st-banner h3 {
-  font-size: 48px;
-  color: #fff;
-  position: relative;
-}
-.st-banner h3::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 10%;
-  height: 4px;
-  background-color: #049FD6;
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+.st-about .about-content {
+  line-height: 1.5;
 }
 
+.st-history .history-item {
+  padding: 20px;
+  border: 1px solid #049FD6;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.st-history .history-item h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #049FD6;
+  flex-basis: auto;
+}
+@media print, screen and (min-width: 1366px) {
+  .st-history .history-item h2 {
+    color: red;
+  }
+}
+.st-history .history-item .text {
+  font-size: 18px;
+  flex: 1;
+}
+
+.st-vision .vision {
+  display: flex;
+  gap: 24px;
+}
+.st-vision .vision-item {
+  max-width: 392px;
+  padding: 24px;
+  border: 1px solid #E6E6E6;
+}
+.st-vision .vision-img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 16px;
+}
+.st-vision .vision-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.st-vision .vision-desc {
+  color: #808080;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.st-value .value {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.st-value .value-content {
+  max-width: 600px;
+}
+.st-value .value-subtitle {
+  line-height: 1.5;
+  color: #808080;
+  margin-top: 40px;
+}
+.st-value .value-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.st-value .value-item {
+  max-width: 288px;
+  border: 1px solid #E6E6E6;
+  padding: 24px;
+}
+.st-value .value-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.st-value .value-desc {
+  color: #808080;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.st-personnel .personnel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 40px;
+}
+.st-personnel .personnel-img {
+  max-width: 288px;
+}
+.st-personnel .personnel-name {
+  color: #333333;
+  font-weight: bold;
+  margin-top: 16px;
+}
+.st-personnel .personnel-pos {
+  color: #049FD6;
+  margin-top: 4px;
+}
+
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
 html,
 body,
 div,
@@ -156,7 +257,12 @@ q:after {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  max-width: 1254px !important;
+  max-width: 1254px;
+}
+@media screen and (max-width: 1199px) {
+  .l-container {
+    padding: 0 30px;
+  }
 }
 
 .body-container {
@@ -264,6 +370,12 @@ q:after {
   visibility: hidden;
   z-index: 1000;
 }
+@media screen and (max-width: 559px) {
+  #backtotop {
+    width: 34px;
+    height: 34px;
+  }
+}
 #backtotop:hover {
   cursor: pointer;
 }
@@ -274,11 +386,16 @@ q:after {
 
 .st-banner {
   background-image: url(./../images/about/banner-about.jpg);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1365px) {
+  .st-banner {
+    height: 300px;
+  }
 }
 .st-banner h3 {
   font-size: 48px;

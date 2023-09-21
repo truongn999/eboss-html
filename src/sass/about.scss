@@ -1,4 +1,5 @@
 @import './color.scss';
+@import './media.scss';
 
 // ABOUT
 .st-about {
@@ -23,11 +24,117 @@
             font-weight: bold;
             color: $cl-secondary;
             flex-basis: auto;
+
+            @include mq(xlMin) {
+                color: red;
+            }
         }
 
         .text {
             font-size: 18px;
             flex: 1;
         }
+    }
+}
+
+// MISSION AND VISION
+.st-vision {
+    .vision {
+        display: flex;
+        gap: 24px;
+
+        &-item {
+            max-width: 392px;
+            padding: 24px;
+            border: 1px solid $grey-10;
+        }
+        &-img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+        &-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: $grey-80;
+            margin-bottom: 8px;
+        }
+        &-desc {
+            color: $grey-50;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}
+
+//CORE VALUE
+.st-value {
+    .value {
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: center;
+
+        &-content {
+            max-width: 600px;
+        }
+
+        &-subtitle {
+            line-height: 1.5;
+            color: $grey-50;
+            margin-top: 40px;
+        }
+
+        &-list {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        &-item {
+            max-width: 288px;
+            border: 1px solid $grey-10;
+            padding: 24px;
+        }
+
+        &-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: $grey-80;
+            margin-bottom: 8px;
+        }
+
+        &-desc {
+            color: $grey-50;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}
+
+//PERSONNEL
+.st-personnel {
+    .personnel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        row-gap: 40px;
+    }
+    .personnel-item {}
+
+    .personnel-img {
+        max-width: 288px;
+    }
+
+    .personnel-name {
+        color: $grey-80;
+        font-weight: bold;
+        margin-top: 16px;
+    }
+
+    .personnel-pos {
+        color: $cl-secondary;
+        margin-top: 4px;
     }
 }
