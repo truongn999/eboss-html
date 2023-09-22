@@ -1,0 +1,95 @@
+@import './color.scss';
+@import './media.scss';
+
+.p-product {
+
+  .product-list {
+    justify-content: space-between;
+    gap: unset;
+    row-gap: 24px;
+
+    @include mq(lgMax) {
+      row-gap: 16px;
+    }
+  }
+  .product {
+    width: 32%;
+
+    @include mq(mdMax) {
+      width: 49%;
+      max-width: max-content;
+    }
+
+    @include mq(smMax) {
+      width: 100%;
+      max-width: max-content;
+    }
+
+    &-img {
+      img {
+        @include mq(smMax) {
+          width: 100%;
+        }
+      }
+    }
+
+    &-content {
+      padding: 16px;
+    }
+  }
+}
+
+// WHY CHOOSE US
+.st-why {
+  .why {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 24px;
+
+      @include mq(smMax) {
+        row-gap: 16px;
+      }
+
+      // @include mq(lMin) {
+      //   gap: 24px;
+      // }
+    }
+
+    &-item {
+        max-width: 288px;
+        width: 25%;
+        border: 1px solid $grey-10;
+        padding: 24px;
+
+        @include mq(lMax) {
+          width: 49%;
+          max-width: unset;
+        }
+
+        @include mq(mdMax) {
+          width: 48%;
+          max-width: unset;
+        }
+
+        @include mq(smMax) {
+            width: 100%;
+            // max-width: 392px;
+        }
+    }
+
+    &-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: $grey-80;
+        margin-bottom: 8px;
+    }
+
+    &-desc {
+        color: $grey-50;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+  }
+}

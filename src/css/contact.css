@@ -1,0 +1,95 @@
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+.st-contact .contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+}
+@media screen and (max-width: 1199px) {
+  .st-contact .contact {
+    grid-template-columns: unset;
+    justify-content: center;
+  }
+}
+.st-contact .contact-info h4 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.st-contact .contact-subtitle {
+  color: #808080;
+  margin-bottom: 8px;
+}
+.st-contact .contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.st-contact .contact-item__text {
+  color: #808080;
+}
+.st-contact .contact-social__list {
+  display: flex;
+  gap: 16px;
+}
+.st-contact .contact-social__list svg {
+  color: #FF793B;
+  transition: 0.3s all;
+}
+.st-contact .contact-social__list svg:hover {
+  color: #049FD6;
+  transition: 0.3s all;
+}
+.st-contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.st-contact .contact-title {
+  display: none;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+@media screen and (max-width: 1199px) {
+  .st-contact .contact-title {
+    display: block;
+  }
+}
+.st-contact .contact-line {
+  display: flex;
+  gap: 24px;
+}
+@media screen and (max-width: 559px) {
+  .st-contact .contact-line {
+    flex-direction: column;
+  }
+}
+.st-contact .contact-input {
+  width: 100%;
+}
+.st-contact .contact-input input, .st-contact .contact-input .input, .st-contact .contact-input textarea {
+  width: 288px;
+  height: 40px;
+  padding: 16px;
+  background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
+  border-radius: 4px;
+  color: #333333;
+}
+@media screen and (max-width: 768px) {
+  .st-contact .contact-input input, .st-contact .contact-input .input, .st-contact .contact-input textarea {
+    width: 100%;
+  }
+}
+.st-contact .contact-input input, .st-contact .contact-input textarea {
+  width: 100%;
+}
+.st-contact .contact-input textarea {
+  height: unset;
+}/*# sourceMappingURL=contact.css.map */

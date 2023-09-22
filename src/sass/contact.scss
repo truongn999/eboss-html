@@ -1,0 +1,105 @@
+@import './color.scss';
+@import './media.scss';
+
+.st-contact {
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+
+        @include mq(lMax) {
+            grid-template-columns: unset;
+            justify-content: center;
+        }
+        &-info {
+            h4 {
+                font-size: 32px;
+                font-weight: bold;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-subtitle {
+            color: $grey-50;
+            margin-bottom: 8px;
+        }
+
+        &-item {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 16px;
+
+            &__text {
+                color: $grey-50;
+            }
+        }
+
+        &-social__list {
+            display: flex;
+            gap: 16px;
+      
+            svg {
+                color: $cl-primary;
+                transition: .3s all;
+      
+                &:hover {
+                    color: $cl-secondary;
+                    transition: .3s all;
+                }
+            }
+        }
+
+        &-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-title {
+            display: none;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 24px;
+
+            @include mq(lMax) {
+                display: block;
+            }
+        }
+
+        &-line {
+            display: flex;
+            gap: 24px;
+
+            @include mq(smMax) {
+                flex-direction: column;
+            }
+        }
+
+        &-input {
+            width: 100%;
+            input, .input, textarea {
+                width: 288px;
+                height: 40px;
+                padding: 16px;
+                background-color: $grey-5;
+                border: 1px solid $grey-5;
+                border-radius: 4px;
+                color: $grey-80;
+
+                @include mq(mdMax) {
+                    width: 100%;
+                }
+                
+            }
+
+            input, textarea {
+                width: 100%;
+            }
+
+            textarea {
+                height: unset;
+            }
+        }
+    }
+}

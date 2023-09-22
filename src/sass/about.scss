@@ -19,20 +19,29 @@
         align-items: center;
         margin-bottom: 32px;
 
+        @include mq(mdMax) {
+            flex-direction: column;
+            align-items: start;
+            gap: 0;
+        }
+
         h2 {
             font-size: 48px;
             font-weight: bold;
             color: $cl-secondary;
             flex-basis: auto;
 
-            @include mq(xlMin) {
-                color: red;
+            @include mq(smMax) {
+                font-size: 34px;
             }
         }
 
         .text {
             font-size: 18px;
             flex: 1;
+            @include mq(smMax) {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -42,6 +51,11 @@
     .vision {
         display: flex;
         gap: 24px;
+
+        @include mq(smMax) {
+            flex-direction: column;
+            align-items: center;
+        }
 
         &-item {
             max-width: 392px;
@@ -76,8 +90,22 @@
         justify-content: center;
         align-items: center;
 
+        @include mq(mdMax) {
+            flex-direction: column;
+        }
+
         &-content {
             max-width: 600px;
+
+            @include mq(mdMax) {
+                max-width: 100%;
+            }
+        }
+
+        .ct-title {
+            @include mq(mdMax) {
+                text-align: center;
+            }
         }
 
         &-subtitle {
@@ -90,12 +118,20 @@
             display: flex;
             gap: 24px;
             flex-wrap: wrap;
+
+            @include mq(mdMax) {
+                justify-content: center;
+            }
         }
 
         &-item {
             max-width: 288px;
             border: 1px solid $grey-10;
             padding: 24px;
+
+            @include mq(smMax) {
+                max-width: 392px;
+            }
         }
 
         &-title {
@@ -120,6 +156,10 @@
         flex-wrap: wrap;
         gap: 24px;
         row-gap: 40px;
+
+        @include mq(mdMax) {
+            justify-content: center;
+        }
     }
     .personnel-item {}
 
