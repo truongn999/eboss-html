@@ -62,3 +62,21 @@ function closeMenu() {
     isShow = !isShow;
 }
 
+//Swiper Slider Comment in Product page
+// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+// var swiper = new Swiper(".mySwiper", {
+//   cssMode: true,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+//   mousewheel: true,
+//   keyboard: true,
+// });
+
+// var swiperBtnNext = document.getElementsByClassName('swiper-button-next')
+// console.log(swiper, 1111111111, toggle);
+
