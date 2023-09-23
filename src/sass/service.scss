@@ -1,0 +1,32 @@
+@import './color.scss';
+@import './media.scss';
+
+.st-service {
+    .service {
+        .abouts {
+            @include mq(mdMax) {
+                flex-direction: column;
+                border: 1px solid #e6e6e6;
+                padding: 16px;
+                gap: 24px;
+            }
+
+            &-title {
+                font-size: 28px;
+            }
+            &:not(:first-child) {
+                margin-top: 40px;
+
+                @include mq(mdMax) {
+                    margin-top: 24px;
+                }
+            }
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                @include mq(mdMax) {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

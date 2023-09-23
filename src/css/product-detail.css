@@ -1,0 +1,163 @@
+@charset "UTF-8";
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+.st-process .process-title {
+  font-size: 48px;
+  position: relative;
+}
+@media screen and (max-width: 959px) {
+  .st-process .process-title {
+    font-size: 34px;
+  }
+}
+.st-process .process-title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  height: 4px;
+  background-color: #049FD6;
+}
+.st-process .process-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+@media screen and (max-width: 559px) {
+  .st-process .process-content {
+    grid-template-columns: 1fr;
+  }
+}
+.st-process .process-item {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #049FD6;
+}
+.st-process .process-item h2 {
+  padding: 4px 22px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  border: 1px solid #FF793B;
+  color: #FF793B;
+}
+@media screen and (max-width: 959px) {
+  .st-process .process-item h2 {
+    font-size: 34px;
+  }
+}
+.st-process .process-item h3 {
+  line-height: 1.1;
+}
+@media screen and (max-width: 959px) {
+  .st-process .process-item h3 {
+    font-size: 24px;
+  }
+}
+.st-process .process-name {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #049FD6;
+}
+.st-process .process-desc {
+  margin-top: 16px;
+  letter-spacing: 0.32px;
+}
+
+.st-feature .feature-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+@media screen and (max-width: 959px) {
+  .st-feature .feature-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 559px) {
+  .st-feature .feature-content {
+    grid-template-columns: 1fr;
+  }
+}
+.st-feature .feature-title {
+  position: relative;
+  font-size: 48px;
+}
+@media screen and (max-width: 959px) {
+  .st-feature .feature-title {
+    font-size: 34px;
+  }
+}
+.st-feature .feature-title::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 20%;
+  height: 4px;
+  background-color: #049FD6;
+}
+.st-feature .feature-item {
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25);
+  padding: 32px;
+}
+@media screen and (max-width: 959px) {
+  .st-feature .feature-item {
+    padding: 16px;
+  }
+}
+.st-feature .feature-item h4 {
+  font-size: 28px;
+  font-weight: bold;
+}
+@media screen and (max-width: 959px) {
+  .st-feature .feature-item h4 {
+    font-size: 24px;
+  }
+}
+.st-feature .feature-desc {
+  font-size: 18px;
+  line-height: 1.1;
+}
+
+.st-fqa .fqa .collapsible {
+  background-color: #f8f8f8;
+  color: #000;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.st-fqa .fqa .collapsible::after {
+  content: "+"; /* Unicode character for "plus" sign (+) */
+  font-size: 24px;
+  color: black;
+  float: right;
+}
+.st-fqa .fqa .collapsible.active::after {
+  content: "−";
+}
+.st-fqa .fqa .content {
+  border-top: 1px solid #e3e3e3;
+  padding: 30px;
+  display: none;
+  overflow: hidden;
+  background-color: #f8f8f8;
+}/*# sourceMappingURL=product-detail.css.map */

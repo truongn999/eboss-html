@@ -1,0 +1,175 @@
+@import './color.scss';
+@import './media.scss';
+
+.st-process {
+  .process {
+    &-title {
+      font-size: 48px;
+      position: relative;
+
+      @include mq(lgMax) {
+        font-size: 34px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 15%;
+        height: 4px;
+        background-color: $cl-secondary;
+      }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      @include mq(smMax) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-item {
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid $cl-secondary;
+
+      h2 {
+        padding: 4px 22px;
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: bold;
+        border: 1px solid $cl-primary;
+        color: $cl-primary;
+
+        @include mq(lgMax) {
+          font-size: 34px;
+        }
+      }
+
+      h3 {
+        line-height: 1.1;
+
+        @include mq(lgMax) {
+          font-size: 24px;
+        }
+      }
+      
+    }
+
+    &-name {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 36px;
+      font-weight: 600;
+      color: $cl-secondary;
+    }
+
+    &-desc {
+      margin-top: 16px;
+      letter-spacing: 0.32px;
+    }
+  }
+}
+
+.st-feature {
+  .feature {
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+
+      @include mq(lgMax) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include mq(smMax) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-title {
+      position: relative;
+      font-size: 48px;
+      @include mq(lgMax) {
+        font-size: 34px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 20%;
+        height: 4px;
+        background-color: $cl-secondary;
+      }
+    }
+
+    &-item {
+      border-radius: 12px;
+      background: #FFF;
+      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.25);
+      padding: 32px;
+
+      @include mq(lgMax) {
+        padding: 16px;
+      }
+
+      h4 {
+        font-size: 28px;
+        font-weight: bold;
+        @include mq(lgMax) {
+          font-size: 24px;
+        }
+      }
+    }
+
+    &-desc {
+      font-size: 18px;
+      line-height: 1.1;
+    }
+  }
+}
+
+.st-fqa {
+  .fqa {
+    .collapsible {
+      background-color: #f8f8f8;
+      color: #000;
+      cursor: pointer;
+      padding: 30px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+
+      &::after {
+        content: '\002B'; /* Unicode character for "plus" sign (+) */
+        font-size: 24px;
+        color: black;
+        float: right;
+        // margin-left: 5px;
+      }
+
+      &.active::after {
+        content: "\2212"
+      }
+    }
+
+    .content {
+      border-top: 1px solid #e3e3e3;
+      padding: 30px;
+      display: none;
+      overflow: hidden;
+      background-color: #f8f8f8;
+    }
+  }
+}

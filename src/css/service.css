@@ -1,0 +1,33 @@
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts {
+    flex-direction: column;
+    border: 1px solid #e6e6e6;
+    padding: 16px;
+    gap: 24px;
+  }
+}
+.st-service .service .abouts-title {
+  font-size: 28px;
+}
+.st-service .service .abouts:not(:first-child) {
+  margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts:not(:first-child) {
+    margin-top: 24px;
+  }
+}
+.st-service .service .abouts:nth-child(even) {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts:nth-child(even) {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=service.css.map */

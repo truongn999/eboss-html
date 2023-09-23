@@ -103,67 +103,6 @@
     }
 }
 
-// ABOUT US
-.abouts {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-
-    // @include mq(smMax) {
-    //     display: block;
-    // }
-
-    @include mq(mdMax) {
-        flex-direction: column-reverse;
-    }
-
-    &-img {
-        @include mq(lMax) {
-            flex-basis: auto;
-            max-width: 400px;
-
-            img {
-                max-width: inherit;
-            }
-        }
-
-
-        @include mq(mdMax) {
-            max-width: 280px;
-        }
-    }
-
-    &-content {
-        @include mq(lgMax) {
-            flex: 1;
-        }
-    }
-
-    &-subtitle {
-        color: $grey-50;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-
-    &-title {
-        color: $grey-80;
-        font-size: 42px;
-        font-weight: bold;
-
-        @include mq(lgMax) {
-            font-size: 32px;
-        }
-    }
-
-    &-desc {
-        line-height: 1.5;
-    }
-
-    &-button {
-        margin-top: 1.5rem;
-    }
-}
-
 //ANALYST
 .st-analyst {
     background-image: url(./../images/analyst-bg.png);

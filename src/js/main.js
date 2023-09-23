@@ -62,21 +62,21 @@ function closeMenu() {
     isShow = !isShow;
 }
 
-//Swiper Slider Comment in Product page
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
-// var swiper = new Swiper(".mySwiper", {
-//   cssMode: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-//   mousewheel: true,
-//   keyboard: true,
-// });
+// FQAS
+var coll = document.getElementsByClassName("collapsible");
+var i;
 
-// var swiperBtnNext = document.getElementsByClassName('swiper-button-next')
-// console.log(swiper, 1111111111, toggle);
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    
+    this.classList.toggle("active");
+    isShowTog = i;
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
