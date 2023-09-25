@@ -144,3 +144,38 @@
         color: $grey-50;
     }
 }
+
+.ct-pagination {
+    margin-top: 24px;
+    .pagination-ul {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+    .pagination-number {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        font-weight: bold;
+        color: $grey-30;
+        cursor: pointer;
+
+        &.active {
+            color: $cl-secondary;
+        }
+
+        &.unactive {
+            color: $grey-10;
+            cursor: default;
+
+            &:hover {
+                color: $grey-10;
+            }
+        }
+
+        &:hover {
+            color: $cl-secondary;
+        }
+    }
+}

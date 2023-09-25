@@ -124,4 +124,35 @@
   border-left: 1px solid #E6E6E6;
   cursor: pointer;
   color: #808080;
+}
+
+.ct-pagination {
+  margin-top: 24px;
+}
+.ct-pagination .pagination-ul {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.ct-pagination .pagination-number {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-weight: bold;
+  color: #B3b3b3;
+  cursor: pointer;
+}
+.ct-pagination .pagination-number.active {
+  color: #049FD6;
+}
+.ct-pagination .pagination-number.unactive {
+  color: #E6E6E6;
+  cursor: default;
+}
+.ct-pagination .pagination-number.unactive:hover {
+  color: #E6E6E6;
+}
+.ct-pagination .pagination-number:hover {
+  color: #049FD6;
 }/*# sourceMappingURL=blog.css.map */
