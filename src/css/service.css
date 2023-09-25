@@ -10,10 +10,32 @@
     border: 1px solid #e6e6e6;
     padding: 16px;
     gap: 24px;
+    text-align: center !important;
   }
 }
 .st-service .service .abouts-title {
   font-size: 28px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts-title {
+    margin-bottom: 16px;
+  }
+}
+.st-service .service .abouts-title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  height: 4px;
+  background-color: #049FD6;
+}
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .st-service .service .abouts:not(:first-child) {
   margin-top: 40px;
@@ -24,10 +46,22 @@
   }
 }
 .st-service .service .abouts:nth-child(even) {
+  text-align: end;
   flex-direction: row-reverse;
 }
 @media screen and (max-width: 768px) {
   .st-service .service .abouts:nth-child(even) {
     flex-direction: column;
+  }
+}
+.st-service .service .abouts:nth-child(even) .abouts-title::after {
+  left: unset;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .st-service .service .abouts:nth-child(even) .abouts-title::after {
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
   }
 }/*# sourceMappingURL=service.css.map */

@@ -1,0 +1,104 @@
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+.st-network .network-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+@media screen and (max-width: 959px) {
+  .st-network .network-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .st-network .network-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 559px) {
+  .st-network .network-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.st-network .frame-item-content {
+  text-align: left;
+  height: 100%;
+  justify-content: space-between;
+}
+.st-network .frame-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.st-network .frame-item h3 {
+  text-align: center;
+}
+.st-network .frame-item-sumary {
+  color: #808080;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.st-network .frame-item-desc {
+  color: #000;
+}
+.st-network .frame-item-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.st-network .frame-item-line svg {
+  flex-basis: auto;
+}
+.st-network .frame-item-line div {
+  flex: 1;
+}
+.st-network .frame-item-action {
+  text-align: center;
+  color: #FF793B;
+}
+.st-network .frame-item-action:hover {
+  color: #2979FF;
+}
+
+.st-ict .ict-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+@media screen and (max-width: 959px) {
+  .st-ict .ict-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .st-ict .ict-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 559px) {
+  .st-ict .ict-list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.st-ict .frame-item-title h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.st-ict .frame-item-img {
+  height: 250px;
+}
+.st-ict .frame-item-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=service-detail.css.map */

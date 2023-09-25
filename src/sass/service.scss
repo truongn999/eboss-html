@@ -9,10 +9,30 @@
                 border: 1px solid #e6e6e6;
                 padding: 16px;
                 gap: 24px;
+                text-align: center !important;
             }
 
             &-title {
                 font-size: 28px;
+                position: relative;
+
+                @include mq(mdMax) {
+                    margin-bottom: 16px;
+                }
+                 &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 35%;
+                    height: 4px;
+                    background-color: $cl-secondary;
+
+                    @include mq(mdMax) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
             }
             &:not(:first-child) {
                 margin-top: 40px;
@@ -22,9 +42,22 @@
                 }
             }
             &:nth-child(even) {
+                text-align: end;
                 flex-direction: row-reverse;
+
                 @include mq(mdMax) {
                     flex-direction: column;
+                }
+            }
+
+            &:nth-child(even) .abouts-title::after {
+                left: unset;
+                right: 0;
+
+                @include mq(mdMax) {
+                    left: 50%;
+                    right: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }

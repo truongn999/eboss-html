@@ -740,6 +740,32 @@ img {
   visibility: visible;
 }
 
+.hasLink {
+  position: relative;
+}
+.hasLink .picture-avatar {
+  display: block;
+  aspect-ratio: 388/296;
+  line-height: 0;
+}
+.hasLink img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hasLink > .link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
 .st-banner {
   background-image: url(./../images/about/banner-about.jpg);
   background-size: 100% 100%;
@@ -794,32 +820,40 @@ img {
     justify-content: center;
   }
 }
-.st-product .product {
+
+.frame-item {
   max-width: 392px;
   border: 1px solid #E6E6E6;
+  transition: all 0.2s ease;
 }
 @media screen and (max-width: 1199px) {
-  .st-product .product {
+  .frame-item {
     max-width: 380px;
   }
 }
 @media screen and (max-width: 768px) {
-  .st-product .product {
+  .frame-item {
     max-width: 300px;
   }
 }
 @media screen and (max-width: 559px) {
-  .st-product .product {
+  .frame-item {
     max-width: 380px;
   }
 }
-.st-product .product-img {
+.frame-item-img {
   width: initial;
 }
-.st-product .product-img img {
+.frame-item-img img {
   max-width: 100%;
 }
-.st-product .product-content {
+.frame-item:hover {
+  background: var(--grey-0);
+  box-sizing: border-box;
+  box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07), 0 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  transform: scale(1.01);
+}
+.frame-item-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -828,7 +862,7 @@ img {
   text-align: center;
   border-top: none;
 }
-.st-product .product-cate {
+.frame-item-cate {
   position: absolute;
   left: 50%;
   top: -18px;
@@ -837,34 +871,34 @@ img {
   font-weight: 600;
 }
 @media screen and (max-width: 1199px) {
-  .st-product .product-cate {
+  .frame-item-cate {
     width: -moz-max-content;
     width: max-content;
     max-width: 150px;
   }
 }
-.st-product .product-title h3 {
+.frame-item-title h3 {
   font-size: 26px;
   font-weight: bold;
 }
 @media screen and (max-width: 1199px) {
-  .st-product .product-title h3 {
+  .frame-item-title h3 {
     font-size: 24px;
   }
 }
-.st-product .product-title .author {
+.frame-item-title .author {
   font-size: 16px;
 }
-.st-product .product-title .author span {
+.frame-item-title .author span {
   color: #2979FF;
   font-weight: bold;
 }
-.st-product .product-desc {
+.frame-item-desc {
   color: #808080;
   font-weight: 400;
   line-height: 1.5;
 }
-.st-product .product-action {
+.frame-item-action {
   color: #2979FF;
   font-weight: 400;
 }

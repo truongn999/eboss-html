@@ -640,6 +640,34 @@ img {
   }
 }
 
+//AVATAR PICTURE
+.hasLink {
+  position: relative;
+  .picture-avatar {
+      display: block;
+      aspect-ratio: 388/296;
+      line-height: 0;
+  }
+
+  img {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      max-height: none;
+      object-fit: cover;
+  }
+
+  &>.link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+  }
+}
+
 // COMPONENT BANNER
 .st-banner {
   background-image: url(./../images/about/banner-about.jpg);
@@ -694,84 +722,93 @@ img {
       justify-content: center;
     }
   }
-  .product {
-    max-width: 392px;
-    border: 1px solid $grey-10;
+}
+
+.frame-item {
+  max-width: 392px;
+  border: 1px solid $grey-10;
+  transition: all .2s ease;
+
+  @include mq(lMax) {
+    max-width: 380px;
+  }
+
+  @include mq(mdMax) {
+    max-width: 300px;
+  }
+
+  @include mq(smMax) {
+    max-width: 380px;
+  }
+
+  &-img {
+    width: initial;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &:hover {
+    background: var(--grey-0);
+    box-sizing: border-box;
+    box-shadow: 0 100px 80px rgba(0,0,0,.07), 0 41.7776px 33.4221px rgba(0,0,0,.0503198), 0 22.3363px 17.869px rgba(0,0,0,.0417275), 0 12.5216px 10.0172px rgba(0,0,0,.035), 0 6.6501px 5.32008px rgba(0,0,0,.0282725), 0 2.76726px 2.21381px rgba(0,0,0,.0196802);
+    transform: scale(1.01);
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 16px;
+    text-align: center;
+    border-top: none;
+  }
+
+  &-cate {
+    position: absolute;
+    left: 50%;
+    top: -18px;
+    transform: translate(-50%);
+    font-size: 13px;
+    font-weight: 600;
 
     @include mq(lMax) {
-      max-width: 380px;
+      width: max-content;
+      max-width: 150px;
     }
+  }
 
-    @include mq(mdMax) {
-      max-width: 300px;
-    }
-
-    @include mq(smMax) {
-      max-width: 380px;
-    }
-
-    &-img {
-      width: initial;
-
-      img {
-        max-width: 100%;
-      }
-    }
-
-    &-content {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding: 32px 16px;
-      text-align: center;
-      border-top: none;
-    }
-
-    &-cate {
-      position: absolute;
-      left: 50%;
-      top: -18px;
-      transform: translate(-50%);
-      font-size: 13px;
-      font-weight: 600;
+  &-title {
+    h3 {
+      font-size: 26px;
+      font-weight: bold;
 
       @include mq(lMax) {
-        width: max-content;
-        max-width: 150px;
+        font-size: 24px;
       }
     }
 
-    &-title {
-      h3 {
-        font-size: 26px;
+    .author {
+      font-size: 16px;
+
+      span {
+        color: $cl-primary-blue;
         font-weight: bold;
-
-        @include mq(lMax) {
-          font-size: 24px;
-        }
-      }
-
-      .author {
-        font-size: 16px;
-
-        span {
-          color: $cl-primary-blue;
-          font-weight: bold;
-        }
       }
     }
+  }
 
-    &-desc {
-      color: $grey-50;
-      font-weight: 400;
-      line-height: 1.5;
-    }
+  &-desc {
+    color: $grey-50;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 
-    &-action {
-      color: $cl-primary-blue;
-      font-weight: 400;
-    }
+  &-action {
+    color: $cl-primary-blue;
+    font-weight: 400;
   }
 }
 
