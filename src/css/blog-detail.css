@@ -8,6 +8,19 @@
   display: flex;
   gap: 128px;
 }
+.st-blog-main .blog-title {
+  line-height: 1.1;
+  position: relative;
+}
+.st-blog-main .blog-title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  height: 4px;
+  background-color: #049FD6;
+}
 @media screen and (max-width: 959px) {
   .st-blog-main .blog-menu {
     display: none;
@@ -74,65 +87,11 @@
   gap: 8px;
   align-items: center;
 }
-.st-blog-main .blog-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-@media screen and (max-width: 959px) {
-  .st-blog-main .blog-content {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 768px) {
-  .st-blog-main .blog-content {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 559px) {
-  .st-blog-main .blog-content {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-}
-@media screen and (max-width: 959px) {
-  .st-blog-main .frame-item {
-    max-width: unset;
-  }
-}
-.st-blog-main .frame-item-cate {
-  left: unset;
-  transform: none;
-}
-@media screen and (max-width: 1199px) {
-  .st-blog-main .frame-item-cate {
-    max-width: -moz-max-content;
-    max-width: max-content;
-  }
-}
-.st-blog-main .frame-item-content {
-  text-align: left;
-}
-.st-blog-main .frame-item-title .author, .st-blog-main .frame-item-title div {
+.st-blog-main .author, .st-blog-main .writer {
   display: flex;
   gap: 8px;
   align-items: center;
   color: #808080;
-}
-@media screen and (max-width: 1199px) {
-  .st-blog-main .frame-item-desc {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-}
-@media screen and (max-width: 559px) {
-  .st-blog-main .frame-item-desc {
-    -webkit-line-clamp: 2;
-  }
 }
 .st-blog-main .ct-blog-menu {
   visibility: hidden;
@@ -185,33 +144,74 @@
   color: #808080;
 }
 
-.ct-pagination {
-  margin-top: 24px;
+.blog-detail-h2 {
+  font-size: 28px;
+  font-weight: bold;
 }
-.ct-pagination .pagination-ul {
+
+.blog-detail-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.st-blog-related .blog-related {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+@media screen and (max-width: 959px) {
+  .st-blog-related .blog-related {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .st-blog-related .blog-related {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 559px) {
+  .st-blog-related .blog-related {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 959px) {
+  .st-blog-related .frame-item {
+    max-width: unset;
+  }
+}
+.st-blog-related .frame-item-cate {
+  left: unset;
+  transform: none;
+}
+@media screen and (max-width: 1199px) {
+  .st-blog-related .frame-item-cate {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
+.st-blog-related .frame-item-content {
+  text-align: left;
+}
+.st-blog-related .frame-item-title .author, .st-blog-related .frame-item-title div {
   display: flex;
   gap: 8px;
   align-items: center;
-  justify-content: center;
+  color: #808080;
 }
-.ct-pagination .pagination-number {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  font-weight: bold;
-  color: #B3b3b3;
-  cursor: pointer;
+@media screen and (max-width: 1199px) {
+  .st-blog-related .frame-item-desc {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }
-.ct-pagination .pagination-number.active {
-  color: #049FD6;
-}
-.ct-pagination .pagination-number.unactive {
-  color: #E6E6E6;
-  cursor: default;
-}
-.ct-pagination .pagination-number.unactive:hover {
-  color: #E6E6E6;
-}
-.ct-pagination .pagination-number:hover {
-  color: #049FD6;
-}/*# sourceMappingURL=blog.css.map */
+@media screen and (max-width: 559px) {
+  .st-blog-related .frame-item-desc {
+    -webkit-line-clamp: 2;
+  }
+}/*# sourceMappingURL=blog-detail.css.map */

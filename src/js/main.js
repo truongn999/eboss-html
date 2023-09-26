@@ -55,11 +55,32 @@ function funcShowMenu() {
   }
 }
 
+// Action in backgroup dark
 function closeMenu() {
   document.body.style.overflowY = 'unset';
-    toggle.classList.remove("show");
-    overlayBG.classList.remove("show");
+
+  // Close menu Blog
+  if (document.getElementsByClassName('navMenuHeader show').length > 0) {
+    document.getElementById('navMenuList').classList.remove('show');
     isShow = !isShow;
+  }
+  // toggle.classList.remove("show");
+  overlayBG.classList.remove("show");
+  
+
+  // Close menu Blog
+  if (document.getElementsByClassName('blogMenu show').length > 0) {
+    document.getElementById('blogMenu').classList.remove('show');
+    isShowBlog = !isShowBlog;
+  }
+
+  // Close Menu Recruitment
+  if (document.getElementsByClassName('recruitment-menu show').length > 0) {
+    console.log(11111111111);
+    document.getElementById('menuRecruitment').classList.remove('show');
+    isRecruitment = !isRecruitment;
+  }
+
 }
 
 // FQAS
@@ -79,4 +100,41 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// MENU CLICK HUMBERGER
+let isShowBlog = false
+let blogMenu = document.getElementById('blogMenu')
+function funcShowMenuBlog() {
+  if (!isShowBlog) {
+    document.body.style.overflowY = 'hidden';
+    blogMenu.classList.add("show");
+    overlayBG.classList.add("show");
+    isShowBlog = !isShowBlog;
+  }
+  else {
+    document.body.style.overflowY = 'unset';
+    blogMenu.classList.remove("show");
+    overlayBG.classList.remove("show");
+    isShowBlog = !isShowBlog;
+  }
+}
+
+// menuRecruitment MENU CLICK HUMBERGER
+let isRecruitment = false
+let menuRecruitment = document.getElementById('menuRecruitment')
+function funcShowMenuRecruitment() {
+  if (!isRecruitment) {
+    document.body.style.overflowY = 'hidden';
+    menuRecruitment.classList.add("show");
+    overlayBG.classList.add("show");
+    isRecruitment = !isRecruitment;
+  }
+  else {
+    document.body.style.overflowY = 'unset';
+    menuRecruitment.classList.remove("show");
+    overlayBG.classList.remove("show");
+    isRecruitment = !isRecruitment;
+  }
+}
+
 

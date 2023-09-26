@@ -329,12 +329,12 @@ img {
         visibility: hidden;
         opacity: 0;
         transition: 0.3s all;
-        position: absolute;
+        position: fixed;
         top: 0;
-        right: -30px;
+        right: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba($color: #000000, $alpha: 0.5);
+        background-color: rgba($color: #000000, $alpha: 0.6);
         z-index: 2;
 
         &.show {

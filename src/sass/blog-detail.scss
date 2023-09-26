@@ -7,6 +7,21 @@
         display: flex;
         gap: 128px;
 
+        &-title {
+            line-height: 1.1;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                width: 35%;
+                height: 4px;
+                background-color: #049FD6;
+            }
+        }
+
         &-menu {
             @include mq(lgMax) {
                 display: none;
@@ -89,63 +104,12 @@
             }
         }
     }
-    .blog-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
 
-        @include mq(lgMax) {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        @include mq(mdMax) {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        @include mq(smMax) {
-            grid-template-columns: 1fr;
-            justify-items: center;
-        }
-    }
-    .frame-item {
-
-        @include mq(lgMax) {
-            max-width: unset;
-        }
-        &-cate {
-            left: unset;
-            transform: none;
-            @include mq(lMax) {
-                max-width: max-content;
-            }
-        }
-
-        &-content {
-            text-align: left;
-        }
-
-        &-title {
-            .author, div {
-                display: flex;
-                gap: 8px;
-                align-items: center;
-                color: $grey-50;
-            }
-        }
-
-        &-desc {
-            @include mq(lMax) {
-                text-overflow: ellipsis;
-                overflow: hidden;
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-            }
-            @include mq(smMax) {
-                -webkit-line-clamp: 2;
-            }
-        }
+    .author, .writer {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: $grey-50;
     }
 
     .ct-blog-menu {
@@ -203,37 +167,74 @@
     }
 }
 
-.ct-pagination {
-    margin-top: 24px;
-    .pagination-ul {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        justify-content: center;
-    }
-    .pagination-number {
-        display: flex;
-        align-items: center;
-        padding: 8px;
-        font-weight: bold;
-        color: $grey-30;
-        cursor: pointer;
+.blog-detail-h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.blog-detail-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+//BÀI VIẾT LIÊN QUAN
+.st-blog-related {
+    .blog-related {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
 
-        &.active {
-            color: $cl-secondary;
+        @include mq(lgMax) {
+            grid-template-columns: 1fr 1fr;
         }
 
-        &.unactive {
-            color: $grey-10;
-            cursor: default;
+        @include mq(mdMax) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-            &:hover {
-                color: $grey-10;
+        @include mq(smMax) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+    }
+
+    .frame-item {
+
+        @include mq(lgMax) {
+            max-width: unset;
+        }
+        &-cate {
+            left: unset;
+            transform: none;
+            @include mq(lMax) {
+                max-width: max-content;
             }
         }
 
-        &:hover {
-            color: $cl-secondary;
+        &-content {
+            text-align: left;
+        }
+
+        &-title {
+            .author, div {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                color: $grey-50;
+            }
+        }
+
+        &-desc {
+            @include mq(lMax) {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            @include mq(smMax) {
+                -webkit-line-clamp: 2;
+            }
         }
     }
 }

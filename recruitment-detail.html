@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eBOSS.vn</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="./src/css/style.css" rel="stylesheet">
+    <link href="./src/css/font.css" rel="stylesheet">
+    <link href="./src/css/color.css" rel="stylesheet">
+    <link href="./src/css/index.css" rel="stylesheet">
+    <link href="./src/css/about.css" rel="stylesheet">
+    <link href="./src/css/product.css" rel="stylesheet">
+    <link href="./src/css/product-detail.css" rel="stylesheet">
+    <link href="./src/css/service.css" rel="stylesheet">
+    <link href="./src/css/service-detail.css" rel="stylesheet">
+    <link href="./src/css/blog.css" rel="stylesheet">
+    <link href="./src/css/recruitment.css" rel="stylesheet">
+    <link href="./src/css/recruitment-detail.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+        <div class="l-container">
+            <nav class="nav-menu navbar navbar-expand-lg navbar-light">
+                <div class="logo">
+                    <a href="index.html"><img src="./src/images/Logo.png" alt="logo"></a>
+                </div>
+                <div class="btn-humberger" onclick="funcShowMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 25 25" fill="none">
+                        <path d="M3.58813 12.3181H21.5881" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.58813 6.31812H21.5881" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.58813 18.3181H21.5881" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div id="navMenuList" class="navMenuHeader">
+                    <div class="icon-close">
+                        <svg onclick="funcShowMenu()" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 25 25" fill="none">
+                            <path d="M18.9758 6.41919L6.97583 18.4192" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.97583 6.41919L18.9758 18.4192" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <ul  class="menu-list navbar-nav">
+                        <li class="nav-item"><a href="index.html">Trang chủ</a></li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li class="tdropdown">
+                            <a class="menu-items__link" href="product.html">Sản phẩm <img class="dropdown-icon" src="./src/images/right-button.svg" alt="down-icon"></a>
+                            <ul class="tdropdown-menu">
+                                <li><a href="product.html">Phần mềm quản lí</a></li>
+                                <li><a href="#">Dịch vụ phẩn mềm</a></li>
+                            </ul>
+                        </li>
+                        <li class="tdropdown">
+                            <a class="menu-items__link" href="service.html">Dịch vụ <img class="dropdown-icon" src="./src/images/right-button.svg" alt="down-icon"></a>
+                            <ul class="tdropdown-menu">
+                                <li><a href="service-detail.html">Thiết bị ICT</a></li>
+                                <li><a href="service-detail.html">Phần mềm bản quyền</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blog.html">Tin tức</a></li>
+                        <li><a href="recruitment.html">Tuyển dụng</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                        <div class="language-dropdown">
+                            <button class="dropdown-toggle" id="languageDropdown">
+                                <img src="./src/images/logo-vn.png" alt="Ngôn ngữ 1" class="language-icon-main">
+                                <!-- <span class="dropdown-icon-main">▼</span> -->
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="languageDropdown">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/images/logo-vn.png" alt="Ngôn ngữ 1" class="language-icon-show">
+                                        <span class="language-text-show">Việt Nam</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/images/us.png" alt="Ngôn ngữ 2" class="language-icon-show">
+                                        <span class="language-text-show">Engligh</span>
+                                    </a>
+                                </li>
+                                <!-- Thêm các ngôn ngữ khác ở đây -->
+                            </ul>
+                        </div>
+                        
+                    </ul>
+                </div>
+                <div onclick="closeMenu()" id="overlayBG" class="overlay-bg"></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Start -->
+    <section class="st-banner">
+        <div class="l-container">
+            <h1>Backend dot Net ASP</h1>
+        </div>
+    </section>
+    <!-- Banner End -->
+    
+    <section class="section st-recruitmentdetail">
+        <div class="l-container">
+            <div class="recruitment-detail">
+                <div class="recruitment-content">
+                    <div class="job-info">
+                        <h2 class="job-info-title">Mô tả công việc</h2>
+                        <div class="job-info-content">
+                            - Understand the project requirements and work with stakeholders, project manager and team members in test planning, specification, implementation, setup and execution of test cases.
+                            <br>- Perform manual and send test reports to development team, team leader and project manager.
+                            <br>- Follow up for issue verification and bug resolution.
+                            <br>- Partner with engineering and infrastructure teams to leverage DevOps (CI/CD) and automation for scalable solutions to prevent regressions and ensure <br>- reliability of products.
+                        </div>
+                    </div>
+                    <div class="job-info">
+                        <h2 class="job-info-title">Kinh nghiệm</h2>
+                        <div class="job-info-content">
+                            - At least 2 years of experience in software testing
+                            <br>- Proficiency in manual testing techniques for Mobile, Web and API, including functional, usability, regression, and exploratory testing.
+                            <br>- Solid understanding of software testing principles, methodologies, and best practices.
+                            <br>- Ability to investigate and diagnose issues effectively, utilizing logging tools and Postman for debugging when needed.
+                            <br>- Ability to design test cases, and ensure the comprehensive test coverage.
+                            <br>- Ability to write and execute SQL queries to interact with a MySQL database, retrieve data, and validate data integrity.
+                            <br>- Excellent problem-solving skills, with a keen eye for detail and a proactive approach to identifying potential issues.
+                            <br>- Proactively contribute ideas and suggestions to enhance API performance and overall system efficiency.
+                            <br>- Experience in testing third-party modules and ensuring seamless integration with existing systems.
+                            <br>- Proficiency in using Version Control Management (Git/Github/GitLab) for collaborating with the Development team.
+                            <br>- Familiarity with testing microservices architecture and associated challenges.
+                            <br>- Strong communication skills and the ability to work well within a team, especially in an Agile/Scrum development environment.
+                            <br>- Willingness to adapt to new technologies, tools, and testing methodologies as the QA landscape evolves.
+                        </div>
+                    </div>
+                    <div class="job-info">
+                        <h2 class="job-info-title">Bạn sẽ nhận được</h2>
+                        <div class="job-info-content">
+                            <div class="job-info-content-sub">Competitive Salary and Brilliant Health Benefits</div>
+                            - Attractive salary (13th-month salary, salary review twice/year) and project bonus
+                            <br>- Bonus programs for candidate referral, technical article writing
+                            <br>- Interest-free loan support for personal plan
+                            <br>- Allowance for sickness, maternity and paternity and Periodic health examination
+                            <br>- PVI health care program The staff of the quarter and year reward
+                            <div class="job-info-content-sub">Progressive and Fun Working Environment</div>
+                            - A professional English-speaking working environment with Agile – Scrum model
+                            <br>- Hybrid Working Model: Flexible working time and WFH support.
+                            <br>- Surrounded with friendly, open-minded, young and supportive colleagues Annual company trip and regular team-building parties, party celebration (Christmas, Birthday, Mid-autumn,...), Sports clubs (football, badminton, swimming …)
+                            <div class="job-info-content-sub">Valuable Training</div>
+                            - Sponsor examination fee for professional certificates (AWS, Azure, IELTS, PMP, Scrum Master,...)
+                            <br>- Sponsor fee for joining any technical training sessions and courses.
+                            <br>- Free English workshops
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="recruitment-form">
+                    <div class="form-title">
+                        Gửi CV của bạn
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Name *">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Phone Number *">
+                    </div>
+                    <div class="form-input">
+                        <input type="email" placeholder="Email *">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Link Git / Linkedin / Facebook, ... *">
+                    </div>
+                    <div class="form-input form-input-file">
+                        <input class="form-file" type="file" id="formInput" placeholder="Name *">
+                        <label for="formInput">Upload File</label>
+                    </div>
+                    <div class="form-input">
+                        <textarea class="input" placeholder="Talk about yourself *" name="" id="" cols="30" rows="5"></textarea>
+                    </div>
+                    <div>
+                        <button class="form-button">Gửi CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section st-recruitment-related">
+        <div class="l-container">
+            <h2 class="title">Tuyển dụng liên quan</h2>
+            <div class="recruitment-related">
+                <a href="#">
+                    <div class="recruitment-item">
+                        <div>
+                            <div class="recruitment-item-title">
+                                IT Helper
+                            </div>
+                            <div class="recruitment-item-info">
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3103)">
+                                          <path d="M7.99967 11.5133L12.1197 14L11.0263 9.31334L14.6663 6.16L9.87301 5.75334L7.99967 1.33334L6.12634 5.75334L1.33301 6.16L4.97301 9.31334L3.87967 14L7.99967 11.5133Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3103">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Middle, Senior</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3244)">
+                                          <path d="M7.99967 1.33333C5.41967 1.33333 3.33301 3.41999 3.33301 5.99999C3.33301 9.49999 7.99967 14.6667 7.99967 14.6667C7.99967 14.6667 12.6663 9.49999 12.6663 5.99999C12.6663 3.41999 10.5797 1.33333 7.99967 1.33333ZM7.99967 7.66666C7.07967 7.66666 6.33301 6.91999 6.33301 5.99999C6.33301 5.07999 7.07967 4.33333 7.99967 4.33333C8.91967 4.33333 9.66634 5.07999 9.66634 5.99999C9.66634 6.91999 8.91967 7.66666 7.99967 7.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3244">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>TP. Hồ Chí Minh</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3252)">
+                                          <path d="M4.66667 7.33333H6V8.66666H4.66667V7.33333ZM14 3.99999V13.3333C14 14.0667 13.4 14.6667 12.6667 14.6667H3.33333C2.59333 14.6667 2 14.0667 2 13.3333L2.00667 3.99999C2.00667 3.26666 2.59333 2.66666 3.33333 2.66666H4V1.33333H5.33333V2.66666H10.6667V1.33333H12V2.66666H12.6667C13.4 2.66666 14 3.26666 14 3.99999ZM3.33333 5.33333H12.6667V3.99999H3.33333V5.33333ZM12.6667 13.3333V6.66666H3.33333V13.3333H12.6667ZM10 8.66666H11.3333V7.33333H10V8.66666ZM7.33333 8.66666H8.66667V7.33333H7.33333V8.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3252">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Fulltime</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_75_3222)">
+                              <path d="M11.6665 7L10.0215 8.645L15.3648 14L10.0215 19.355L11.6665 21L18.6665 14L11.6665 7Z" fill="CurrentColor"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_75_3222">
+                                <rect width="28" height="28" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="recruitment-item">
+                        <div>
+                            <div class="recruitment-item-title">
+                                IT Helper
+                            </div>
+                            <div class="recruitment-item-info">
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3103)">
+                                          <path d="M7.99967 11.5133L12.1197 14L11.0263 9.31334L14.6663 6.16L9.87301 5.75334L7.99967 1.33334L6.12634 5.75334L1.33301 6.16L4.97301 9.31334L3.87967 14L7.99967 11.5133Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3103">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Middle, Senior</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3244)">
+                                          <path d="M7.99967 1.33333C5.41967 1.33333 3.33301 3.41999 3.33301 5.99999C3.33301 9.49999 7.99967 14.6667 7.99967 14.6667C7.99967 14.6667 12.6663 9.49999 12.6663 5.99999C12.6663 3.41999 10.5797 1.33333 7.99967 1.33333ZM7.99967 7.66666C7.07967 7.66666 6.33301 6.91999 6.33301 5.99999C6.33301 5.07999 7.07967 4.33333 7.99967 4.33333C8.91967 4.33333 9.66634 5.07999 9.66634 5.99999C9.66634 6.91999 8.91967 7.66666 7.99967 7.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3244">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>TP. Hồ Chí Minh</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3252)">
+                                          <path d="M4.66667 7.33333H6V8.66666H4.66667V7.33333ZM14 3.99999V13.3333C14 14.0667 13.4 14.6667 12.6667 14.6667H3.33333C2.59333 14.6667 2 14.0667 2 13.3333L2.00667 3.99999C2.00667 3.26666 2.59333 2.66666 3.33333 2.66666H4V1.33333H5.33333V2.66666H10.6667V1.33333H12V2.66666H12.6667C13.4 2.66666 14 3.26666 14 3.99999ZM3.33333 5.33333H12.6667V3.99999H3.33333V5.33333ZM12.6667 13.3333V6.66666H3.33333V13.3333H12.6667ZM10 8.66666H11.3333V7.33333H10V8.66666ZM7.33333 8.66666H8.66667V7.33333H7.33333V8.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3252">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Fulltime</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_75_3222)">
+                              <path d="M11.6665 7L10.0215 8.645L15.3648 14L10.0215 19.355L11.6665 21L18.6665 14L11.6665 7Z" fill="CurrentColor"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_75_3222">
+                                <rect width="28" height="28" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="recruitment-item">
+                        <div>
+                            <div class="recruitment-item-title">
+                                IT Helper
+                            </div>
+                            <div class="recruitment-item-info">
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3103)">
+                                          <path d="M7.99967 11.5133L12.1197 14L11.0263 9.31334L14.6663 6.16L9.87301 5.75334L7.99967 1.33334L6.12634 5.75334L1.33301 6.16L4.97301 9.31334L3.87967 14L7.99967 11.5133Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3103">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Middle, Senior</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3244)">
+                                          <path d="M7.99967 1.33333C5.41967 1.33333 3.33301 3.41999 3.33301 5.99999C3.33301 9.49999 7.99967 14.6667 7.99967 14.6667C7.99967 14.6667 12.6663 9.49999 12.6663 5.99999C12.6663 3.41999 10.5797 1.33333 7.99967 1.33333ZM7.99967 7.66666C7.07967 7.66666 6.33301 6.91999 6.33301 5.99999C6.33301 5.07999 7.07967 4.33333 7.99967 4.33333C8.91967 4.33333 9.66634 5.07999 9.66634 5.99999C9.66634 6.91999 8.91967 7.66666 7.99967 7.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3244">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>TP. Hồ Chí Minh</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3252)">
+                                          <path d="M4.66667 7.33333H6V8.66666H4.66667V7.33333ZM14 3.99999V13.3333C14 14.0667 13.4 14.6667 12.6667 14.6667H3.33333C2.59333 14.6667 2 14.0667 2 13.3333L2.00667 3.99999C2.00667 3.26666 2.59333 2.66666 3.33333 2.66666H4V1.33333H5.33333V2.66666H10.6667V1.33333H12V2.66666H12.6667C13.4 2.66666 14 3.26666 14 3.99999ZM3.33333 5.33333H12.6667V3.99999H3.33333V5.33333ZM12.6667 13.3333V6.66666H3.33333V13.3333H12.6667ZM10 8.66666H11.3333V7.33333H10V8.66666ZM7.33333 8.66666H8.66667V7.33333H7.33333V8.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3252">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Fulltime</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_75_3222)">
+                              <path d="M11.6665 7L10.0215 8.645L15.3648 14L10.0215 19.355L11.6665 21L18.6665 14L11.6665 7Z" fill="CurrentColor"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_75_3222">
+                                <rect width="28" height="28" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="recruitment-item">
+                        <div>
+                            <div class="recruitment-item-title">
+                                IT Helper
+                            </div>
+                            <div class="recruitment-item-info">
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3103)">
+                                          <path d="M7.99967 11.5133L12.1197 14L11.0263 9.31334L14.6663 6.16L9.87301 5.75334L7.99967 1.33334L6.12634 5.75334L1.33301 6.16L4.97301 9.31334L3.87967 14L7.99967 11.5133Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3103">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Middle, Senior</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3244)">
+                                          <path d="M7.99967 1.33333C5.41967 1.33333 3.33301 3.41999 3.33301 5.99999C3.33301 9.49999 7.99967 14.6667 7.99967 14.6667C7.99967 14.6667 12.6663 9.49999 12.6663 5.99999C12.6663 3.41999 10.5797 1.33333 7.99967 1.33333ZM7.99967 7.66666C7.07967 7.66666 6.33301 6.91999 6.33301 5.99999C6.33301 5.07999 7.07967 4.33333 7.99967 4.33333C8.91967 4.33333 9.66634 5.07999 9.66634 5.99999C9.66634 6.91999 8.91967 7.66666 7.99967 7.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3244">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>TP. Hồ Chí Minh</div>
+                                    <div class="recruitment-item-l"></div>
+                                </div>
+                                <div class="recruitment-item-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_75_3252)">
+                                          <path d="M4.66667 7.33333H6V8.66666H4.66667V7.33333ZM14 3.99999V13.3333C14 14.0667 13.4 14.6667 12.6667 14.6667H3.33333C2.59333 14.6667 2 14.0667 2 13.3333L2.00667 3.99999C2.00667 3.26666 2.59333 2.66666 3.33333 2.66666H4V1.33333H5.33333V2.66666H10.6667V1.33333H12V2.66666H12.6667C13.4 2.66666 14 3.26666 14 3.99999ZM3.33333 5.33333H12.6667V3.99999H3.33333V5.33333ZM12.6667 13.3333V6.66666H3.33333V13.3333H12.6667ZM10 8.66666H11.3333V7.33333H10V8.66666ZM7.33333 8.66666H8.66667V7.33333H7.33333V8.66666Z" fill="#929292"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_75_3252">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>Fulltime</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <g clip-path="url(#clip0_75_3222)">
+                              <path d="M11.6665 7L10.0215 8.645L15.3648 14L10.0215 19.355L11.6665 21L18.6665 14L11.6665 7Z" fill="CurrentColor"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_75_3222">
+                                <rect width="28" height="28" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Start -->
+    <section class="section st-support">
+        <div class="st-support__bgtop"></div>
+        <div class="l-container">
+            <div class="support">
+                <div class="support-text">
+                    <h3>Hỗ trợ ngay</h3>
+                    <div class="support-subtitle">
+                        Do you know what it takes to grow your business online? Do you want to?
+                    </div>
+                </div>
+                <div class="support-form">
+                    <div class="form">
+                        <div class="form-line">
+                            <div class="form-item">
+                                <div class="form-title">Họ và tên <span>*</span></div>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="form-item">
+                                <div class="form-title">Email <span>*</span></div>
+                                <div><input type="email"></div>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <div class="form-item">
+                                <div class="form-title">Số điện thoại <span>*</span></div>
+                                <div><input type="text"></div>
+                            </div>
+                            <div class="form-item">
+                                <div class="form-title">Địa chỉ <span>*</span></div>
+                                <div><input type="text"></div>
+                            </div>
+                        </div>
+                        <div class="form-line">
+                            <div class="form-item">
+                                <div class="form-title">Yêu cầu của bạn <span>*</span></div>
+                                <textarea placeholder="Nhập nội dung" cols="30" rows="7"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="button-primary link" href="#">Gửi yêu cầu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Support End -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="l-container">
+            <div class="footer-content">
+                <div class="ft-w-25 footer-info">
+                    <a href="#"><img src="./src/images/Logo.png" alt="Logo"></a>
+                    <div class="footer-info__desc">Công ty ERP Khoáng Triển, thành lập 2004, chuyên sản xuất phần mềm đa dạng như ERP, HRM, kế toán và quản lý. Đồng thời, cung cấp dịch vụ mua bán, bảo trì máy tính, thiết kế mạng và quản lý bảo trì.</div>
+                </div>
+                <div class="ft-w-25 footer-contact">
+                    <h4>LIÊN HỆ</h4>
+                    <div class="footer-list">
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <g clip-path="url(#clip0_23_1303)">
+                                  <path d="M12.3333 2C8.46334 2 5.33334 5.13 5.33334 9C5.33334 14.25 12.3333 22 12.3333 22C12.3333 22 19.3333 14.25 19.3333 9C19.3333 5.13 16.2033 2 12.3333 2ZM7.33334 9C7.33334 6.24 9.57334 4 12.3333 4C15.0933 4 17.3333 6.24 17.3333 9C17.3333 11.88 14.4533 16.19 12.3333 18.88C10.2533 16.21 7.33334 11.85 7.33334 9Z" fill="white"/>
+                                  <path d="M12.3333 11.5C13.7141 11.5 14.8333 10.3807 14.8333 9C14.8333 7.61929 13.7141 6.5 12.3333 6.5C10.9526 6.5 9.83334 7.61929 9.83334 9C9.83334 10.3807 10.9526 11.5 12.3333 11.5Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1303">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.333344)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="footer-item__text">
+                                Số 35 đường số 8, KDC Him Lam, Tân Hưng, Quận 7
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <g clip-path="url(#clip0_23_1306)">
+                                  <path d="M16.3333 1H8.33334C6.67334 1 5.33334 2.34 5.33334 4V20C5.33334 21.66 6.67334 23 8.33334 23H16.3333C17.9933 23 19.3333 21.66 19.3333 20V4C19.3333 2.34 17.9933 1 16.3333 1ZM17.3333 18H7.33334V4H17.3333V18ZM14.3333 21H10.3333V20H14.3333V21Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1306">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.333344)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="tel:+(028) 2227 7979">(028) 2227 7979</a>
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <g clip-path="url(#clip0_23_1309)">
+                                  <path d="M22.3333 6C22.3333 4.9 21.4333 4 20.3333 4H4.33334C3.23334 4 2.33334 4.9 2.33334 6V18C2.33334 19.1 3.23334 20 4.33334 20H20.3333C21.4333 20 22.3333 19.1 22.3333 18V6ZM20.3333 6L12.3333 10.99L4.33334 6H20.3333ZM20.3333 18H4.33334V8L12.3333 13L20.3333 8V18Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1309">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.333344)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="mailto:support.eboss@gmail.com">support.eboss@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                <g clip-path="url(#clip0_315_1924)">
+                                  <path d="M13.1667 8.00006H11.6667V14.0001L16.4167 16.8501L17.1667 15.6201L13.1667 13.2501V8.00006ZM18.0037 1.81006L22.6107 5.65506L21.3307 7.19006L16.7207 3.34706L18.0037 1.81006ZM7.32966 1.81006L8.61166 3.34606L4.00366 7.19006L2.72366 5.65406L7.32966 1.81006ZM12.6667 4.00006C7.69666 4.00006 3.66666 8.03006 3.66666 13.0001C3.66666 17.9701 7.69666 22.0001 12.6667 22.0001C17.6367 22.0001 21.6667 17.9701 21.6667 13.0001C21.6667 8.03006 17.6367 4.00006 12.6667 4.00006ZM12.6667 20.0001C8.80666 20.0001 5.66666 16.8601 5.66666 13.0001C5.66666 9.14006 8.80666 6.00006 12.6667 6.00006C16.5267 6.00006 19.6667 9.14006 19.6667 13.0001C19.6667 16.8601 16.5267 20.0001 12.6667 20.0001Z" fill="white"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_315_1924">
+                                    <rect width="24" height="24" fill="white" transform="translate(0.666656)"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="footer-item__text">
+                                Thời gian làm việc: 8h - 17h
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-w-25 footer-hot">
+                    <h4>NỔI BẬT</h4>
+                    <div class="footer-list">
+                        <div class="footer-item">
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="product.html">Sản phẩm</a>
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="service.html">Dịch vụ</a>
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="contact.html">Liên hệ</a>
+                            </div>
+                        </div>
+                        <div class="footer-item">
+                            <div class="footer-item__text">
+                                <a class="ct-link" href="recruitment.html">Tuyển dụng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ft-w-25 footer-social">
+                    <h4>KẾT NỐI NGAY</h4>
+                    <div class="footer-social__list">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_23_1324)">
+                                  <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="currentColor"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1324">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_23_1325)">
+                                  <path d="M7.55016 21.7502C16.6045 21.7502 21.5583 14.2469 21.5583 7.74211C21.5583 7.53117 21.5536 7.31554 21.5442 7.1046C22.5079 6.40771 23.3395 5.5445 24 4.55554C23.1025 4.95484 22.1496 5.21563 21.1739 5.32898C22.2013 4.71315 22.9705 3.74572 23.3391 2.60601C22.3726 3.1788 21.3156 3.58286 20.2134 3.80085C19.4708 3.01181 18.489 2.48936 17.4197 2.3143C16.3504 2.13923 15.2532 2.32129 14.2977 2.83234C13.3423 3.34339 12.5818 4.15495 12.1338 5.14156C11.6859 6.12816 11.5754 7.23486 11.8195 8.29054C9.86249 8.19233 7.94794 7.68395 6.19998 6.79834C4.45203 5.91274 2.90969 4.66968 1.67297 3.14976C1.0444 4.23349 0.852057 5.51589 1.13503 6.73634C1.418 7.95678 2.15506 9.02369 3.19641 9.72023C2.41463 9.69541 1.64998 9.48492 0.965625 9.10617V9.1671C0.964925 10.3044 1.3581 11.4068 2.07831 12.287C2.79852 13.1672 3.80132 13.7708 4.91625 13.9952C4.19206 14.1934 3.43198 14.2222 2.69484 14.0796C3.00945 15.0577 3.62157 15.9131 4.44577 16.5266C5.26997 17.14 6.26512 17.4808 7.29234 17.5015C5.54842 18.8714 3.39417 19.6144 1.17656 19.6109C0.783287 19.6103 0.390399 19.5861 0 19.5387C2.25286 20.984 4.87353 21.7516 7.55016 21.7502Z" fill="currentColor"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1325">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 0C5.37188 0 0 5.37188 0 12C0 17.0859 3.16406 21.4266 7.62656 23.175C7.52344 22.2234 7.425 20.7703 7.66875 19.7344C7.88906 18.7969 9.075 13.7719 9.075 13.7719C9.075 13.7719 8.71406 13.0547 8.71406 11.9906C8.71406 10.3219 9.67969 9.075 10.8844 9.075C11.9062 9.075 12.4031 9.84375 12.4031 10.7672C12.4031 11.7984 11.7469 13.3359 11.4094 14.7609C11.1281 15.9562 12.0094 16.9313 13.1859 16.9313C15.3187 16.9313 16.9594 14.6812 16.9594 11.4375C16.9594 8.56406 14.8969 6.55313 11.9484 6.55313C8.53594 6.55313 6.52969 9.1125 6.52969 11.7609C6.52969 12.7922 6.92812 13.8984 7.425 14.4984C7.52344 14.6156 7.5375 14.7234 7.50937 14.8406C7.42031 15.2203 7.21406 16.0359 7.17656 16.2C7.125 16.4203 7.00313 16.4672 6.77344 16.3594C5.27344 15.6609 4.33594 13.4719 4.33594 11.7094C4.33594 7.92188 7.0875 4.44844 12.2625 4.44844C16.425 4.44844 19.6594 7.41563 19.6594 11.3813C19.6594 15.5156 17.0531 18.8438 13.4344 18.8438C12.2203 18.8438 11.0766 18.2109 10.6828 17.4656C10.6828 17.4656 10.0828 19.7578 9.9375 20.3203C9.66562 21.3609 8.93437 22.6688 8.44687 23.4656C9.57187 23.8125 10.7625 24 12 24C18.6281 24 24 18.6281 24 12C24 5.37188 18.6281 0 12 0Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_23_1327)">
+                                  <path d="M10.3635 14.3789L14.5454 12L10.3635 9.62109V14.3789Z" fill="currentColor"/>
+                                  <path d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM19.6657 15.8761C19.5753 16.2165 19.397 16.5273 19.1487 16.7772C18.9004 17.027 18.5909 17.2073 18.251 17.2999C17.0034 17.6363 12 17.6362 12 17.6362C12 17.6362 6.99656 17.6363 5.74898 17.2999C5.40912 17.2073 5.09955 17.027 4.85127 16.7772C4.60299 16.5273 4.42472 16.2165 4.3343 15.8761C4.00008 14.6203 4.00008 12 4.00008 12C4.00008 12 4.00008 9.37969 4.3343 8.12391C4.42472 7.78345 4.60299 7.47273 4.85127 7.22285C5.09955 6.97296 5.40912 6.79269 5.74898 6.70008C6.99656 6.36375 12 6.36375 12 6.36375C12 6.36375 17.0034 6.36375 18.251 6.70008C18.5909 6.79269 18.9004 6.97296 19.1487 7.22285C19.397 7.47273 19.5753 7.78345 19.6657 8.12391C19.9999 9.37969 19.9999 12 19.9999 12C19.9999 12 19.9999 14.6203 19.6657 15.8761Z" fill="currentColor"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_23_1327">
+                                    <rect width="24" height="24" fill="white"/>
+                                  </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="copy-right text-center">
+            eBOSS © 2023 CREATED BY eBOSS
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <div id="backtotop" onclick="topFunction()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_321_1936)">
+              <path d="M4 12L5.41 13.41L11 7.83V20H13V7.83L18.58 13.42L20 12L12 4L4 12Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_321_1936">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+        </svg>
+    </div>
+    <!-- Back to top End -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>

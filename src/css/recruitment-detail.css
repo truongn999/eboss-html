@@ -1,0 +1,194 @@
+/*========================================*/
+/*  break point
+/*========================================*/
+/*========================================*/
+/*  media query Mixin
+/*========================================*/
+.st-recruitmentdetail .recruitment-detail {
+  display: flex;
+  gap: 60px;
+  position: relative;
+}
+@media screen and (max-width: 959px) {
+  .st-recruitmentdetail .recruitment-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-content {
+  max-width: 800px;
+}
+.st-recruitmentdetail .recruitment-detail .job-info {
+  margin-bottom: 24px;
+}
+.st-recruitmentdetail .recruitment-detail .job-info-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.st-recruitmentdetail .recruitment-detail .job-info-content {
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form {
+  position: sticky;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px 16px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 380px;
+  width: 100%;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input .input, .st-recruitmentdetail .recruitment-detail .recruitment-form .form-input input {
+  padding: 8px 16px;
+  border: 1px solid #DCDCDC;
+  background: #FFF;
+  width: 100%;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  width: 100%;
+  border-radius: 3px;
+  font-family: arial, sans-serif;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-weight: regular;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file input[type=file] {
+  padding: 0;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: 10px;
+  padding: 0;
+  height: 36px;
+  width: 0;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file label {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 96px;
+  height: 30px;
+  line-height: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: white;
+  background-color: #049FD6;
+  border-radius: 0 3px 3px 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file button svg {
+  width: auto;
+  height: 50%;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-content {
+  height: 60px;
+}
+.st-recruitmentdetail .recruitment-detail .recruitment-form .form-button {
+  padding: 8px;
+  width: 100%;
+  background: #049FD6;
+  color: #fff;
+}
+.st-recruitmentdetail .recruitment-detail .job-info-content-sub {
+  font-weight: bold;
+}
+
+.st-recruitment-related h2 {
+  position: relative;
+}
+.st-recruitment-related h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  height: 4px;
+  background-color: #049FD6;
+}
+.st-recruitment-related .recruitment-related {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.st-recruitment-related a {
+  width: calc((100% - 24px) / 2);
+}
+@media screen and (max-width: 959px) {
+  .st-recruitment-related a {
+    width: 100%;
+  }
+}
+.st-recruitment-related .recruitment-item {
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #000;
+}
+.st-recruitment-related .recruitment-item:hover {
+  border: 1px solid #049FD6;
+}
+.st-recruitment-related .recruitment-item:hover .recruitment-item-title {
+  color: #049FD6;
+}
+.st-recruitment-related .recruitment-item:hover .arrow-right {
+  color: #049FD6;
+}
+.st-recruitment-related .recruitment-item-title {
+  font-weight: bold;
+}
+.st-recruitment-related .recruitment-item-info {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 559px) {
+  .st-recruitment-related .recruitment-item-info {
+    flex-direction: column;
+    gap: 8px;
+    align-self: start;
+    text-align: center;
+  }
+}
+.st-recruitment-related .recruitment-item-icon {
+  display: flex;
+  gap: 16px;
+}
+.st-recruitment-related .recruitment-item-l {
+  border-right: 1px solid #ccc;
+}
+@media screen and (max-width: 559px) {
+  .st-recruitment-related .recruitment-item-l {
+    border-right: none;
+  }
+}
+.st-recruitment-related .recruitment-item .arrow-right {
+  color: #929292;
+}/*# sourceMappingURL=recruitment-detail.css.map */

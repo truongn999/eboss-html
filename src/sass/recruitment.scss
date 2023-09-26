@@ -1,0 +1,239 @@
+@import './color.scss';
+@import './media.scss';
+
+.st-recruitment {
+
+    .recruitment {
+        display: flex;
+        gap: 64px;
+
+        &-line {
+            margin: 16px 0;
+            width: 100%;
+            height: 1px;
+            background-color: $grey-10;
+        }
+
+        &-menu {
+            flex-basis: auto;
+            max-width: 350px;
+
+            @include mq(lgMax) {
+                visibility: hidden;
+                opacity: 0;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 360px;
+                height: 100vh;
+                background-color: #808080;
+                padding: 24px;
+                color: #fff;
+                transition: .3s all;
+                z-index: 2;
+
+            }
+
+            &.show {
+                visibility: visible;
+                opacity: 1;
+                transition: .3s all;
+            }
+
+            .recruitment-btn {
+                @include mq(lgMin) {
+                    display: none;
+                }
+            }
+        }
+
+        &-title {
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        &-filter {
+            margin-bottom: 16px;
+            
+
+            &-tag {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .filter-tag {
+                padding: 4px;
+                background-color: $cl-secondary;
+                color: #fff;
+                display: flex;
+                gap: 8px;
+                width: fit-content;
+                border-radius: 8px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $cl-primary;
+                }
+            }
+        }
+
+        &-selection {
+            margin-top: 16px;
+
+            .recruitment-select {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                &-item {
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+        }
+
+        &-content {
+            width: 100%;
+            flex: 1;
+        }
+
+        &-frame {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-item {
+            padding: 24px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: #000;
+
+            &:hover {
+                border: 1px solid $cl-secondary;
+                .recruitment-item-title {
+                    color: $cl-secondary;
+                }
+                .arrow-right {
+                    color: $cl-secondary;
+                }
+            }
+
+            &-title {
+                font-weight: bold;
+            }
+
+            &-info {
+                display: flex;
+                gap: 16px;
+                margin-top: 10px;
+
+                @include mq(smMax) {
+                    flex-direction: column;
+                    gap: 8px;
+                }
+            }
+
+            &-icon {
+                display: flex;
+                gap: 16px;
+            }
+
+            &-l {
+                border-right: 1px solid #ccc;
+                @include mq(smMax) {
+                    border-right: none;
+                }
+            }
+
+            .arrow-right {
+                color: #929292;
+            }
+        }
+    }
+    .ct-recruitment-menu {
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s all;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        z-index: 10;
+        background-color: #808080;
+        width: 350px;
+        height: 100vh;
+        padding: 24px;
+        color: #fff;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s all;
+        }
+    }
+
+
+    .recruitment-btn-humberger {
+        margin-bottom: 16px;
+        text-align: end;
+
+        svg {
+            cursor: pointer;
+        }
+
+        @include mq(lgMin) {
+            display: none;
+        }
+    }
+}
+
+.st-recruitment-info {
+    h2 {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 15%;
+            height: 4px;
+            background-color: $cl-secondary;
+        }
+    }
+    .content {
+        display: flex;
+        gap: 40px;
+
+        &-left, &-right {
+            max-width: 600px;
+        }
+
+        @include mq(mdMax) {
+            flex-wrap: wrap;
+        }
+        &-title {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            div {
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        &-info {
+            line-height: 1.8;
+            margin-top: 16px;
+        }
+    }
+}
