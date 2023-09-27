@@ -46,8 +46,8 @@
                         <li class="tdropdown">
                             <a class="menu-items__link" href="product.html">Sản phẩm <img class="dropdown-icon" src="./src/images/right-button.svg" alt="down-icon"></a>
                             <ul class="tdropdown-menu">
-                                <li><a href="product.html">Phần mềm quản lí</a></li>
-                                <li><a href="#">Dịch vụ phẩn mềm</a></li>
+                                <li><a href="product-detail.html">Phần mềm quản lí</a></li>
+                                <li><a href="product-detail.html">Dịch vụ phẩn mềm</a></li>
                             </ul>
                         </li>
                         <li class="tdropdown">
@@ -115,7 +115,7 @@
                         In a professional context it often happens that private or corporate clients corder a publication to be made and presented.
                     </div>
                     <div class="abouts-button">
-                        <a class="button-primary link" href="/about">
+                        <div onclick="popupFormShow()" class="button-primary link" href="/about">
                             LIÊN HỆ
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                                 <g clip-path="url(#clip0_274_532)">
@@ -127,7 +127,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -410,6 +410,37 @@
         </div>
     </section>
     <!-- Partner End -->
+
+    <div id="popupForm" class="popup-form">
+        <div onclick="closeMenu()" class="icon-close text-end mb-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <path d="M18.7744 6.80957L6.77441 18.8096" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.77441 6.80957L18.7744 18.8096" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div>
+            <div class="pform">
+                <div class="pform-title">
+                    Liên hệ với chúng tôi
+                </div>
+                <div class="pform-input">
+                    <input type="text" placeholder="Name *">
+                </div>
+                <div class="pform-input">
+                    <input type="text" placeholder="Phone Number *">
+                </div>
+                <div class="pform-input">
+                    <input type="email" placeholder="Email *">
+                </div>
+                <div class="pform-input">
+                    <textarea class="input" placeholder="Content *" name="" id="" cols="30" rows="5"></textarea>
+                </div>
+                <div>
+                    <button class="pform-button">Gửi liên hệ</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Support Start -->
     <section class="section st-support">

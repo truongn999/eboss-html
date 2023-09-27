@@ -69,16 +69,21 @@ function closeMenu() {
   
 
   // Close menu Blog
-  if (document.getElementsByClassName('blogMenu show').length > 0) {
+  if (document.getElementsByClassName('ct-blog-menu show').length > 0) {
     document.getElementById('blogMenu').classList.remove('show');
     isShowBlog = !isShowBlog;
   }
 
   // Close Menu Recruitment
   if (document.getElementsByClassName('recruitment-menu show').length > 0) {
-    console.log(11111111111);
     document.getElementById('menuRecruitment').classList.remove('show');
     isRecruitment = !isRecruitment;
+  }
+
+  // Close Menu Recruitment
+  if (document.getElementsByClassName('popup-form show').length > 0) {
+    document.getElementById('popupForm').classList.remove('show');
+    isForm = !isForm;
   }
 
 }
@@ -137,4 +142,22 @@ function funcShowMenuRecruitment() {
   }
 }
 
+// POPUP FORM
+let isForm = false;
+let popupForm = document.getElementById('popupForm');
+
+function popupFormShow() {
+  if (!isForm) {
+    document.body.style.overflowY = 'hidden';
+    popupForm.classList.add("show");
+    overlayBG.classList.add("show");
+    isForm = !isForm;
+  }
+  else {
+    document.body.style.overflowY = 'unset';
+    popupForm.classList.remove("show");
+    overlayBG.classList.remove("show");
+    isForm = !isForm;
+  }
+}
 

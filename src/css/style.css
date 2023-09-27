@@ -899,6 +899,11 @@ img {
   line-height: 1.5;
 }
 .frame-item-action {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
   color: #2979FF;
   font-weight: 400;
 }
@@ -952,4 +957,103 @@ img {
 }
 .abouts-button {
   margin-top: 1.5rem;
+}
+
+.popup-form {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  width: 500px;
+  padding: 24px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: 0.3s all;
+}
+.popup-form.show {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s all;
+}
+.popup-form .icon-close {
+  cursor: pointer;
+}
+
+.pform {
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+.pform .pform-title {
+  font-size: 28px;
+  font-weight: 700;
+}
+.pform .pform-input .input, .pform .pform-input input {
+  padding: 8px 16px;
+  border: 1px solid #DCDCDC;
+  background: #FFF;
+  width: 100%;
+}
+.pform .pform-input-file {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  width: 100%;
+  border-radius: 3px;
+  font-family: arial, sans-serif;
+  font-size: 1rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-weight: regular;
+}
+.pform .pform-input-file input[type=file] {
+  padding: 0;
+}
+.pform .pform-input-file input[type=file]::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: 10px;
+  padding: 0;
+  height: 36px;
+  width: 0;
+}
+.pform .pform-input-file label {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 96px;
+  height: 30px;
+  line-height: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: white;
+  background-color: #049FD6;
+  border-radius: 0 3px 3px 0;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pform .pform-input-file button svg {
+  width: auto;
+  height: 50%;
+}
+.pform .pform-content {
+  height: 60px;
+}
+.pform .pform-button {
+  padding: 8px;
+  width: 100%;
+  background: #049FD6;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
