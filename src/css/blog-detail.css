@@ -8,9 +8,13 @@
   display: flex;
   gap: 128px;
 }
+.st-blog-main .blog-detail-content {
+  max-width: 800px;
+}
 .st-blog-main .blog-title {
   line-height: 1.1;
   position: relative;
+  padding-bottom: 16px;
 }
 .st-blog-main .blog-title::after {
   position: absolute;

@@ -1,6 +1,59 @@
 @import './color.scss';
 @import './media.scss';
 
+
+.ct-banner-recruiment {
+    @include mq(smMax) {
+        height: 200px;
+    }
+    .recruitment-item-info {
+        display: flex;
+        gap: 16px;
+        margin-top: 10px;
+        color: #fff;
+        font-size: 20px;
+
+        @include mq(smMax) {
+            font-size: 16px;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .recruitment-item-icon {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .banner-info {
+        h2 {
+            font-size: 48px;
+            color: #fff;
+
+            @include mq(smMax) {
+                font-size: 32px;
+            }
+
+            @include mq(xsMax) {
+                font-size: 24px;
+            }
+        }
+        position: relative;
+        padding-bottom: 16px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 10%;
+            height: 4px;
+            background-color: #049FD6;
+        }
+    }
+}
+
 .st-recruitmentdetail {
     .recruitment-detail {
         display: flex;

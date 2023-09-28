@@ -4,6 +4,58 @@
 /*========================================*/
 /*  media query Mixin
 /*========================================*/
+@media screen and (max-width: 559px) {
+  .ct-banner-recruiment {
+    height: 200px;
+  }
+}
+.ct-banner-recruiment .recruitment-item-info {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+@media screen and (max-width: 559px) {
+  .ct-banner-recruiment .recruitment-item-info {
+    font-size: 16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.ct-banner-recruiment .recruitment-item-icon {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.ct-banner-recruiment .banner-info {
+  position: relative;
+  padding-bottom: 16px;
+}
+.ct-banner-recruiment .banner-info h2 {
+  font-size: 48px;
+  color: #fff;
+}
+@media screen and (max-width: 559px) {
+  .ct-banner-recruiment .banner-info h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .ct-banner-recruiment .banner-info h2 {
+    font-size: 24px;
+  }
+}
+.ct-banner-recruiment .banner-info::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  height: 4px;
+  background-color: #049FD6;
+}
+
 .st-recruitmentdetail .recruitment-detail {
   display: flex;
   gap: 60px;

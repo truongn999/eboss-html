@@ -441,6 +441,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 16px 0;
+  position: relative;
   /* Style cho dropdown container */
   /* Style cho dropdown toggle button (main) */
   /* Style cho dropdown menu */
@@ -468,30 +469,24 @@ img {
   display: none;
 }
 .header .nav-menu .overlay-bg {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.header .nav-menu .overlay-bg.show {
+  display: unset;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s ease;
 }
 @media screen and (max-width: 959px) {
-  .header .nav-menu {
-    position: relative;
-  }
-  .header .nav-menu .overlay-bg {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s all;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 2;
-  }
-  .header .nav-menu .overlay-bg.show {
-    display: unset;
-    visibility: visible;
-    opacity: 1;
-    transition: 0.3s all;
-  }
   .header .nav-menu #navMenuList {
     visibility: hidden;
     opacity: 0;
@@ -781,13 +776,18 @@ img {
 }
 @media screen and (max-width: 559px) {
   .st-banner {
-    height: 150px;
+    height: 168px;
   }
 }
 .st-banner h1 {
   font-size: 48px;
   color: #fff;
   position: relative;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 @media screen and (max-width: 559px) {
   .st-banner h1 {
@@ -971,6 +971,16 @@ img {
   transform: translate(-50%, -50%);
   z-index: 2;
   transition: 0.3s all;
+}
+@media screen and (max-width: 559px) {
+  .popup-form {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .popup-form {
+    width: 300px;
+  }
 }
 .popup-form.show {
   visibility: visible;
