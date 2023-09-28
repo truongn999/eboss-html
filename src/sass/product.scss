@@ -4,12 +4,25 @@
 .p-product {
 
   .product-list {
-    justify-content: space-between;
-    gap: unset;
-    row-gap: 24px;
+    // justify-content: space-between;
+    // gap: unset;
+    // row-gap: 24px;
 
-    @include mq(lgMax) {
-      row-gap: 16px;
+    // @include mq(lgMax) {
+    //   row-gap: 16px;
+    // }
+
+    .frame-item {
+      width: calc((100% - 48px)/3);
+      max-width: none;
+
+      @include mq(lgMax) {
+        width: calc((100% - 24px)/2);
+      }
+
+      @include mq(smMax) {
+        width: 100%;
+      }
     }
   }
   .product {

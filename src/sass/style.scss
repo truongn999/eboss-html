@@ -714,13 +714,26 @@ img {
     gap: 24px;
     flex-wrap: wrap;
 
-    @include mq(mdMax) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    // @include mq(mdMax) {
+    //   flex-wrap: wrap;
+    //   justify-content: center;
+    // }
 
-    @include mq(smMax) {
-      justify-content: center;
+    // @include mq(smMax) {
+    //   justify-content: center;
+    // }
+
+    .frame-item {
+      width: calc((100% - 48px)/3);
+      max-width: none;
+
+      @include mq(lgMax) {
+        width: calc((100% - 24px)/2);
+      }
+
+      @include mq(smMax) {
+        width: 100%;
+      }
     }
   }
 }

@@ -167,6 +167,14 @@
             opacity: 1;
             transition: 0.3s all;
         }
+
+        .icon-close svg {
+            cursor: pointer;
+
+            &:hover {
+                color: $cl-primary;
+            }
+        }
     }
 
     .blog-btn-humberger {

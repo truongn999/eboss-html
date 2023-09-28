@@ -153,6 +153,12 @@
   opacity: 1;
   transition: 0.3s all;
 }
+.st-blog-main .ct-blog-menu .icon-close svg {
+  cursor: pointer;
+}
+.st-blog-main .ct-blog-menu .icon-close svg:hover {
+  color: #FF793B;
+}
 .st-blog-main .blog-btn-humberger {
   cursor: pointer;
   margin-bottom: 16px;

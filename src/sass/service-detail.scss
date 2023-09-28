@@ -12,16 +12,24 @@
         }
 
         @include mq(mdMax) {
-            flex-wrap: wrap;
-            justify-content: center;
+            display: block;
+
         }
 
-        @include mq(smMax) {
-            grid-template-columns: 1fr;
-            justify-items: center;
-        }
+        // @include mq(smMax) {
+        //     grid-template-columns: 1fr;
+        //     justify-items: center;
+        // }
     }
     .frame-item {
+        @include mq(mdMax) {
+            width: 100%;
+            max-width: none;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
         &-content {
             text-align: left;
             height: 100%;

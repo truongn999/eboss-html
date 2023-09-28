@@ -16,14 +16,16 @@
 }
 @media screen and (max-width: 768px) {
   .st-network .network-list {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: block;
   }
 }
-@media screen and (max-width: 559px) {
-  .st-network .network-list {
-    grid-template-columns: 1fr;
-    justify-items: center;
+@media screen and (max-width: 768px) {
+  .st-network .frame-item {
+    width: 100%;
+    max-width: none;
+  }
+  .st-network .frame-item:not(:last-child) {
+    margin-bottom: 24px;
   }
 }
 .st-network .frame-item-content {
