@@ -10,7 +10,7 @@
         display: flex;
         gap: 16px;
         margin-top: 10px;
-        color: #fff;
+        color: $cl-text;
         font-size: 20px;
 
         @include mq(smMax) {
@@ -29,7 +29,7 @@
     .banner-info {
         h2 {
             font-size: 48px;
-            color: #fff;
+            color: $cl-text;
 
             @include mq(smMax) {
                 font-size: 32px;
@@ -93,7 +93,7 @@
             padding: 30px 16px;
             border-radius: 8px;
             border: 1px solid #CCC;
-            background: #FFF;
+            background: $cl-text;
             box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
             height: fit-content;
             max-width: 380px;
@@ -108,7 +108,7 @@
                 .input, input {
                     padding: 8px 16px;
                     border: 1px solid #DCDCDC;
-                    background: #FFF;
+                    background: $cl-text;
                     width: 100%;
                 }
             }
@@ -169,7 +169,7 @@
                 padding: 8px;
                 width: 100%;
                 background: $cl-secondary;
-                color: #fff;
+                color: $cl-text;
 
             }
 

@@ -92,7 +92,7 @@
   padding: 30px 16px;
   border-radius: 8px;
   border: 1px solid #CCC;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
   height: -moz-fit-content;
   height: fit-content;
@@ -106,7 +106,7 @@
 .st-recruitmentdetail .recruitment-detail .recruitment-form .form-input .input, .st-recruitmentdetail .recruitment-detail .recruitment-form .form-input input {
   padding: 8px 16px;
   border: 1px solid #DCDCDC;
-  background: #FFF;
+  background: #fff;
   width: 100%;
 }
 .st-recruitmentdetail .recruitment-detail .recruitment-form .form-input-file {

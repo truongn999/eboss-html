@@ -134,6 +134,9 @@
     -webkit-line-clamp: 2;
   }
 }
+.st-blog-main .frame-item-action {
+  justify-content: left;
+}
 .st-blog-main .ct-blog-menu {
   visibility: hidden;
   opacity: 0;

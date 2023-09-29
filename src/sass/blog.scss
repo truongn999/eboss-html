@@ -146,6 +146,10 @@
                 -webkit-line-clamp: 2;
             }
         }
+
+        &-action {
+            justify-content: left;
+        }
     }
 
     .ct-blog-menu {
@@ -160,7 +164,7 @@
         width: 350px;
         height: 100vh;
         padding: 24px;
-        color: #fff;
+        color: $cl-text;
 
         &.show {
             visibility: visible;

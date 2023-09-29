@@ -23,6 +23,18 @@
       @include mq(smMax) {
         width: 100%;
       }
+
+      &-action {
+        color: $cl-primary;
+
+        a:hover {
+          color: $cl-primary-blue;
+
+          &+svg {
+            color: $cl-primary-blue;
+          }
+        }
+      }
     }
   }
   .product {
@@ -120,7 +132,7 @@
       width: 29px;
       background-color: #2979FF;
       border-radius: 8px;
-      color: #fff;
+      color: $cl-text;
       height: 25px;
       /* text-align: center; */
       align-items: center;

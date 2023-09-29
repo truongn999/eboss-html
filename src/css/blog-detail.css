@@ -218,4 +218,7 @@
   .st-blog-related .frame-item-desc {
     -webkit-line-clamp: 2;
   }
+}
+.st-blog-related .frame-item-action {
+  justify-content: left;
 }/*# sourceMappingURL=blog-detail.css.map */

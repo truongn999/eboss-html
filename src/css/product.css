@@ -18,6 +18,15 @@
     width: 100%;
   }
 }
+.p-product .product-list .frame-item-action {
+  color: #FF793B;
+}
+.p-product .product-list .frame-item-action a:hover {
+  color: #2979FF;
+}
+.p-product .product-list .frame-item-action a:hover + svg {
+  color: #2979FF;
+}
 .p-product .product {
   width: 32%;
 }

@@ -28,7 +28,7 @@
                 height: 100vh;
                 background-color: #808080;
                 padding: 24px;
-                color: #fff;
+                color: $cl-text;
                 transition: .3s all;
                 z-index: 2;
 
@@ -68,7 +68,7 @@
             .filter-tag {
                 padding: 4px;
                 background-color: $cl-secondary;
-                color: #fff;
+                color: $cl-text;
                 display: flex;
                 gap: 8px;
                 width: fit-content;
@@ -171,7 +171,7 @@
         width: 350px;
         height: 100vh;
         padding: 24px;
-        color: #fff;
+        color: $cl-text;
 
         &.show {
             visibility: visible;
